@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+    <!-- font-awesome -->
+    <script src="https://kit.fontawesome.com/ef8fa15ef1.js" crossorigin="anonymous"></script>
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main>
+        <div class="main-container">
+            <h1>spli<br>tter</h1>
+            <section class="calculator-container">
+                <div class="box-1">
+                    <div class="bill-content">
+                        <h4 class="small-heading">Bill</h4>
+                        
+                        <input type="text" class="bill-text bill-amount" placeholder="0">
+                        <i class="fas fa-dollar-sign"></i>
+                        
+                    </div>
+                    <h4 class="small-heading">Select Tip %</h4>
+                    <div class="btn-box">
+                        <button class="tip-btn">5%</button>
+                        <button class="tip-btn">10%</button>
+                        <button class="tip-btn">15%</button>
+                        <button class="tip-btn">25%</button>
+                        <button class="tip-btn">50%</button>
+                       <input type="text" name="" class="custom-input" placeholder="Custom">
+                    </div>
+                    
+                    <div class="bill-split">
+                        <h4 class="small-heading" id="split-heading">Number of People</h4>
+                        
+                        <input type="text" class="bill-text people-count" placeholder="0" required>
+                        <i class="fa fas fa-user"></i>
+                    </div>
+                </div>
+              
+                <div class="result-content">
+                    <div class="result-box">
+                        <div class="tip-amount">
+                            <h4>Tip Amount <br><span>/ person</span></h4>
+                            <h2 class="tip-person">$0.00</h2>
+                        </div>
+                        <div class="tip-amount ">
+                            <h4>Total <br><span>/ person</span></h4>
+                            <h2 class="bill-total">$0.00</h2>
+                        </div>
+                    </div>
+                    
+                    <button type="button" class="reset-btn">RESET</button>
+                </div>
+            </section>
+        </div>
+        
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>

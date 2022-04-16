@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    background-color: hsl(185, 41%, 84%);
+    font-family: 'Space Mono', monospace;
+    
+}
+.main-container h1{
+    text-align: center;
+    color: hsl(183, 100%, 15%);
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    line-height: 1.5;
+    font-size: 1.5rem;
+    padding: 16% 10% 8%;
+    font-weight: 700;
+}
+.calculator-container{
+    background-color: white;
+    padding: 25px;
+    border-radius: 30px 30px 0 0;
+  
+    
+}
+/* bill input */
+.small-heading{
+    font-size: 1.1rem;
+    font-weight: 700;
+    font-family: 'Space Mono', monospace;
+    margin: 5% 0;
+    color: hsl(186, 14%, 43%);
+}
+.bill-content{
+    position: relative;
+}
+.bill-text{
+    color:hsl(183, 100%, 15%);
+    background-color: hsl(189, 41%, 97%);
+    width: 100%;
+    padding: 12px 25px 12px 35px;
+    text-align: right;
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: 'Space Mono', monospace;
+    border: none;
+    border-radius: 5px;
+    
+    /* position: relative; */
+}
+.bill-text:focus-visible, .custom-input:focus-visible{
+    outline-color:hsl(185, 41%, 84%);
+}
+.bill-content i, .bill-split i{
+    position: absolute;
+    left: 10px;
+    bottom: 20px;
+    font-size: 1.1rem;
+    color: hsl(184, 14%, 56%);
+}
+/* select tip section */
+.btn-box{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 15px;
+}
+.tip-btn{
+    /* width: 160px; */
+    border: none;
+    border-radius: 5px;
+    background-color: hsl(183, 100%, 15%);
+    padding: 12px 35px;
+    font-size: 1.5rem;
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+    color: hsl(185, 41%, 84%);
+    letter-spacing: 3px;
+    cursor: pointer;
+}
+.tip-btn:hover{
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+    transition: 0.5s;
+}
+.custom-input{
+    width: 100%;
+    padding: 12px 25px 12px 35px;
+    text-align: right;
+    border-radius: 5px;
+    border: none;
+    font-size: 1.6rem;
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+    background-color: hsl(189, 41%, 97%);
+}
+
+.bill-split{
+    position: relative;
+}
+/* show error */
+.error::after{
+    content: "can't be zero";
+    font-size: 1rem;
+    display: inline;
+    position: absolute;
+    top:0;
+    right: 0;
+    /* right: 10px; */
+    color: red;   
+}
+/* .bill-split i{
+    position: absolute;
+    left: 10px;
+    bottom: 20px;
+    font-size: 1rem;
+    color: hsl(184, 14%, 56%);
+} */
+/* result section */
+.result-content{
+    width: 100%;
+    background-color: hsl(183, 100%, 15%);
+    padding: 25px;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+.tip-amount:first-child, .result-box:first-child{
+    margin-bottom: 15%;
+}
+.tip-amount{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 20px;
+    font-weight: 700;
+    color: hsl(0, 0%, 100%);
+    font-family: 'Space Mono', monospace;
+    
+}
+.tip-amount h4{
+    font-size: 1.1rem;
+    
+}
+.tip-amount span{
+    font-size: 0.95rem;
+    margin-top: -6px;
+    color: hsl(184, 14%, 56%);
+    
+}
+.tip-amount h2{
+    font-size: 2rem;
+    text-align: right;
+    color: hsl(172, 67%, 45%);
+    /* font-weight: 700; */
+}
+.tip-total{
+    margin-top: 6%;
+}
+.reset-btn{
+    width: 100%;
+    font-size: 1.3rem;
+    font-family: 'Space Mono', monospace;
+    padding: 10px 0;
+    border-radius: 5px;
+    border: none;
+    margin-top: 10%;
+    color: hsl(183, 100%, 15%);
+    background-color: hsl(172, 67%, 45%);
+    cursor: pointer;
+}
+.reset-btn:hover{
+    background-color: hsl(185, 41%, 84%);
+    
+    transition: 0.5s;
+}
+
+
+@media screen and (min-width: 1023px){
+    main{
+        padding: 0% 10% 10% 10%;
+        
+    }
+    .calculator-container{
+        /* width: 100%; */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 30px;
+        
+       
+       
+    }
+ 
+    .btn-box{
+        grid-template-columns: repeat(3, 140px);
+        gap: 10px;
+        
+        
+    }
+    .custom-input{
+        width: 140px;
+        font-size: 1.3rem;
+    }
+    .result-content{
+        flex-basis: 50%;
+        
+        /* width: 50%; */
+        
+        padding: 40px;
+    }
+    .tip-amount{
+        margin-bottom: 10%;
+    }
+    .result-box{
+        margin-bottom: 20%;
+    }
+    .tip-amount h4{
+        font-size: 1.2rem;    
+    }
+    .tip-amount span{
+        font-size: 1.1rem;
+        
+    }
+    .tip-amount h2{
+        font-size: 2.6rem;
+    }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1024px) {
+    /* main{
+        padding: 0% 10%;
+        
+    } */
+    .calculator-container{
+        padding: 15px;
+        
+    }
+    
+    .btn-box{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        
+        
+    }
+    .custom-input{
+        width: 175px;
+        /* font-size: 1.3rem; */
+    }
+}
