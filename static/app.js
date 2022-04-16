@@ -53,9 +53,9 @@ function getFinalResult(tip, bill){
     let percentOfBill = tipPercentage * totalBill
     // tip amount per person round to two decimal places
     let tipPerPerson = Number(percentOfBill / peopleToSplit).toFixed(2);
-    tipPerson.innerHTML = tipPerPerson;
+    tipPerson.innerHTML = `$${tipPerPerson}`;
     // final bill person round to two decimal places
     let finalAmount = ((percentOfBill + totalBill) / peopleToSplit).toFixed(2);
-    billPerson.innerHTML = finalAmount;
+    billPerson.innerHTML = `$${finalAmount}`;
 }
 
